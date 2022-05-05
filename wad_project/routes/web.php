@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 
 /*
@@ -14,35 +15,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// to be deleted
-// im still testing stuff here since i have to try them first
-// thats all ty
-
 // display/view only url
-Route::view('/home', 'home');
-Route::view('/welcome', 'welcome');
-Route::view('/inventory', 'inventory');
+// Route::view('/home', 'home');
+// Route::view('/welcome', 'welcome');
+// Route::view('/create', 'create');
 
-// Route::view('/home', 'home', ['content' => 'I am content.']);
-
-//test
-// Route::get('/test', function(){
-//     return 'i am test';
-// });
-
-// redirection
-// Route::redirect('/', '/test');
-
-// POST/GET
-// Route::get('/class', function(Request $request){
-    
-//     $fname = $_POST['fname'];
-//     $lname = $_GET['lname'];
-//     $request->nameofinput;
-
-//     return $request;
-// });
+Route::get('/', [App\Http\Controllers\PageController::class, 'index']);
+Route::resource('/inventory', 'App\Http\Controllers\ProductController');
+// Route::resource('/create', App\Http\Controllers\ProductController::class, 'create');
+// Route::get('/about', [App\Http\Controllers\PageController::class, 'about']);
