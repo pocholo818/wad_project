@@ -21,6 +21,6 @@ use Illuminate\Http\Request;
 // Route::view('/create', 'create');
 
 Route::get('/', [App\Http\Controllers\PageController::class, 'index']);
-Route::resource('/inventory', 'App\Http\Controllers\ProductController');
+Route::resource('/products', App\Http\Controllers\ProductController::class);
 // Route::resource('/create', App\Http\Controllers\ProductController::class, 'create');
 // Route::get('/about', [App\Http\Controllers\PageController::class, 'about']);

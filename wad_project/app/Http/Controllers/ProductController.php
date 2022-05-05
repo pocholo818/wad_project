@@ -18,9 +18,6 @@ class ProductController extends Controller
         $products = Product::latest()->paginate(5);
         return view('products.index', compact('products'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
-        
-        // $products = Product::all();
-        //     return view ('products.index')->with('products', $products);
     }
 
     /**
@@ -87,6 +84,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return redirect()->route('products.index')
+            ->with('success', 'Product Deleted!');
     }
 }

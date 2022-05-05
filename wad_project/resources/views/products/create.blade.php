@@ -3,6 +3,10 @@
 @section('content')
     <h1 class="text-center">Add Product</h1>
 
+    <a href="{{ url('/products') }}" class="btn btn-success btn-sm">
+        <i class="fa fa-plus" aria-hidden="true"></i>Go Back
+    </a>
+
     <form action="{{ url('product') }}" method="POST">
         @csrf
         <div class="form-group">

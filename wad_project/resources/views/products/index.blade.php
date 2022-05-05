@@ -3,7 +3,7 @@
 @section('content')
   <h1 class="text-center">Products Page</h1>
 
-  <a href="{{ url('/products/create') }}" class="btn btn-success btn-sm">
+  <a href="{{ route('products.create') }}" class="btn btn-success btn-sm">
     <i class="fa fa-plus" aria-hidden="true"></i> Add New
   </a>
 
@@ -37,7 +37,13 @@
       <td>P{{ $product->price }}</td>
       <td>{{ $product->created_at }}</td>
       <td>Edit</td>
-      <td>Delete</td>
+      <form action="{{ route('products.destroy', $product->id) }}" method="post">
+        <td>
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </td>
+      </form>
     </tr>
     @endforeach
   </tbody>
