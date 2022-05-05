@@ -16,11 +16,7 @@ use Illuminate\Http\Request;
 */
 
 // display/view only url
-// Route::view('/home', 'home');
-// Route::view('/welcome', 'welcome');
-// Route::view('/create', 'create');
+Route::view('/', 'index');
+Route::view('/about', 'about');
 
-Route::get('/', [App\Http\Controllers\PageController::class, 'index']);
 Route::resource('/products', App\Http\Controllers\ProductController::class);
-// Route::resource('/create', App\Http\Controllers\ProductController::class, 'create');
-// Route::get('/about', [App\Http\Controllers\PageController::class, 'about']);
