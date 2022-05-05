@@ -5,7 +5,7 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/inventory">Inventory</a>
+                <a class="nav-link" href="/products">Inventory</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/about">About us</a>
