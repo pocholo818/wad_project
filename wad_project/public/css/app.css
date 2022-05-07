@@ -1,1 +1,15 @@
+.navbar
+{
+    background: #121212;
+    position: sticky;
+    top: 0;
+}
 
+.navbar .nav-link 
+{
+    color:#fbbf2c;
+}
+.navbar .navbar-brand
+{
+    color:#fbbf2c;
+}

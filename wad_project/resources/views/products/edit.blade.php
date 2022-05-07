@@ -1,8 +1,10 @@
 @extends('layout.master')
 
 @section('content')
-    <h1 class="text-center">Add Product</h1>
-
+    <h1 class="text-center">Edit Product</h1>
+    <a href="{{ route('products.index') }}" class="btn btn-success btn-sm">
+        <i class="fa fa-plus" aria-hidden="true"></i>Go Back
+    </a>
     @if($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems in your input. <br><br>
@@ -35,6 +37,6 @@
         </div>
         <br>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-warning">Submit</button>
     </form>
 @stop
