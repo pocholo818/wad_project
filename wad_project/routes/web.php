@@ -18,5 +18,8 @@ use Illuminate\Http\Request;
 // display/view only url
 Route::view('/', 'index');
 Route::view('/about', 'about');
+// Route::view('/login', 'admin.login');
+Route::view('/register', 'admin.register');
 
 Route::resource('/products', App\Http\Controllers\ProductController::class);
+Route::resource('/admin', App\Http\Controllers\AdminController::class);

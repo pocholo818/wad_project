@@ -17,7 +17,10 @@
                         <a class="nav-link" href="/about">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Logout</a>
+                        <a class="nav-link" href="/admin">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
                     </li>
                 </ul>
             </div>

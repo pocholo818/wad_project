@@ -18,11 +18,22 @@ class ProductSeeder extends Seeder
     {
         //
         DB::table('products')->insert([
+            [
             'name' => 'Sample Product',
             'code' => 'AAAA1',
             'desc' => 'Sample Product Description.',
             'price' => '99.99',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+
+            [
+            'name' => 'Example Product',
+            'code' => 'BBBB2',
+            'desc' => 'Example Product Description.',
+            'price' => '69.99',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ]
         ]);
+        
     }
 }
